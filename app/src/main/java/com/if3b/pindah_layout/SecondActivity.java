@@ -18,7 +18,7 @@ public class SecondActivity extends AppCompatActivity {
         tvNama = findViewById(R.id.tv_nama);
 
         Intent terima = getIntent();
-        String yNama = terima.getStringExtra("xNama");
+        String yNama = terima.getStringExtra("xnama");
         tvNama.setText(yNama);
     }
 }
