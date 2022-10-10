@@ -17,17 +17,17 @@
       app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/_btnPindah"
+        android:id="@+id/btnPindah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PINDAH"
         android:layout_centerInParent="true"/>
 
     <EditText
-        android:id="@+id/et_Nama"
+        android:id="@+id/et_nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/_btnPindah"
+        android:layout_above="@id/btnPindah"
         android:hint="Nama" />
 
 

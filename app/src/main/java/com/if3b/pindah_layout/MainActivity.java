@@ -19,15 +19,25 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Layout A");
 
-        btnPindah = findViewById(R.id._btnPindah);
-        etNama = findViewById(R.id.et_Nama);
+        btnPindah = findViewById(R.id.btnPindah);
+        etNama = findViewById(R.id.et_nama);
 
         btnPindah.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent pindah = new Intent(MainActivity.this,SecondActivity.class);
+            public void onClick(View view)
+            {
+                String nama = etNama.getText().toString();
+                if (nama.trim().equals("")){
+                    etNama.setError("Nama Harus Diisi!");
+                }
 
-                startActivity(pindah);
+                else
+                {
+                    Intent pindah = new Intent(MainActivity.this, SecondActivity.class);
+                    pindah.putExtra("xnama", nama);
+                    startActivity(pindah);
+                }
+
             }
         });
     }
